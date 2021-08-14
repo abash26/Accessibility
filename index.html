@@ -11,55 +11,56 @@
 </head>
 
 <body>
-  <div class="hero hero-bg is-fullheight">
-    <div class="visuallyhidden">
-      <a href="#maincontent">Skip to main content</a>, <a href="#about">about section</a>,
-      <a href="#topicsSection">topics</a>, <a href="#events">events</a>, 
-      <a href="#services">services</a> or <a href="#footer">footer</a>
-    </div>
-    <header class="hero-head">
-      <div class="navbar">
+  <section class="visuallyhidden" role="navigation">
+    <a href="#maincontent">Skip to main content</a>, <a href="#about">about section</a>,
+    <a href="#topicsSection">topics</a>, <a href="#events">events</a>, 
+    <a href="#services">services</a> or <a href="#footer">footer</a>
+  </section>
+
+  <header class="hero hero-bg is-fullheight">
+    <div class="hero-head" role="region">
+      <nav class="navbar">
         <div class="container">
-          <div class="navbar-brand">
-            <a href="" class="navbar-item logo-link">
+          <div class="navbar-brand" role="menubar">
+            <a href="" class="navbar-item logo-link" aria-haspopup="true">
               <img alt="epam logo" src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg">
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
+            <span class="navbar-burger burger" data-target="navbarMenu" role="menu">
+              <span role="menuitem"></span>
+              <span role="menuitem"></span>
+              <span role="menuitem"></span>
             </span>
           </div>
 
-          <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
-              <span class="navbar-item">
-                <a href="" class="button is-white is-outlined">
-                  <span class="icon">
+          <div id="navbarMenu" class="navbar-menu" role="menubar">
+            <div class="navbar-end" role="menu">
+              <span class="navbar-item" role="menuitem">
+                <a href="" class="button is-white is-outlined" aria-selected="true">
+                  <span aria-hidden="true" class="icon">
                     <i class="fa fa-home"></i>
                   </span>
                   <span>Home</span>
                 </a>
               </span>
-              <span class="navbar-item">
+              <span class="navbar-item" role="menuitem">
                 <a href="" class="button is-white is-outlined">
-                  <span class="icon">
+                  <span aria-hidden="true" class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
                   <span>Examples</span>
                 </a>
               </span>
-              <span class="navbar-item">
+              <span class="navbar-item" role="menuitem">
                 <a href="" class="button is-white is-outlined">
-                  <span class="icon">
+                  <span aria-hidden="true" class="icon">
                     <i class="fa fa-book"></i>
                   </span>
                   <span>Documentation</span>
                 </a>
               </span>
-              <span class="navbar-item">
+              <span class="navbar-item" role="menuitem">
                 <a href="" class="button is-white is-outlined">
-                  <span class="icon">
+                  <span aria-hidden="true" class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>View Source</span>
@@ -68,10 +69,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </nav>
+    </div>
 
-    <div class="hero-body">
+    <section class="hero-body" aria-label="">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
           <h1 class="title has-text-white">We have web accessibility in mind</h1>
@@ -90,8 +91,8 @@
             </div>
           </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </header>
 
   <main id="maincontent">
     <nav aria-label="Breadcrumb" class="breadcrumb visuallyhidden">
@@ -104,9 +105,9 @@
       </ol>
     </nav>
 
-    <section class="section" id="about">
+    <section class="section" aria-labelledby="about">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">About Us</h2>
+        <h2 class="title is-2" id="about">About Us</h2>
         <p class="subtitle is-5">We of all trades, master of "some"</p>
         <div class="container">
           <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
@@ -118,7 +119,7 @@
         </div>
       </div>
 
-      <div class="content container">
+      <div class="content container" role="region">
         <h1 class="is-1 title">Hello World</h1>
         <p>Lorem ipsum<sup><a target="_blank" title="opens in new tab" href="">[1]<img src="img/external.png" width="10px" height="10px" alt=""></a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
         <h2 class="is-2 title">Second level</h2>
@@ -167,6 +168,10 @@
             &lt;/html&gt;
             </pre>
         <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
+        
+        <button type="button" id="trigger">Trigger alert</button>
+        <p class="alert">The alert will trigger when the button is pressed.</p>
+
         <table>
           <caption class="visuallyhidden">Table caption</caption>
           <tr>
@@ -209,11 +214,12 @@
         <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
       </div>
     </div>
+  </section>
 
-    <section class="hero has-background-grey-light">
+    <section class="hero has-background-grey-light" aria-labelledby="features">
       <div class="container features">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Three key features</h2>
+          <h2 class="title is-2" id="features">Three key features</h2>
           <p class="subtitle is-5">We don't hide what we do</p>
         </div>
 
@@ -267,30 +273,30 @@
       </div>
     </section>
 
-    <section class="hero is-info" aria-labelledby="topics" id="topicsSection">
+    <section class="hero is-info" aria-labelledby="topicsSection">
       <div class="hero-body">
         <div class="container">
-          <h3 id="topics" class="title">List of topics</h3>
+          <h3 id="topicsSection" class="title">List of topics</h3>
           <p class="subtitle">We are always in touch we the outside world</p>
         </div>
       </div>
       <div class="tabs is-boxed is-centered main-menu" id="nav">
-        <ul>
-          <li data-target="pane-1" id="1" class="is-active">
-            <a href="">
-              <span class="icon is-small"><i class="fa fa-image"></i></span>
+        <ul role="tablist">
+          <li data-target="pane-1" id="1" aria-selected="true" class="is-active" role="tab" aria-controls="pane-1">
+            <a>
+              <span aria-hidden="true" class="icon is-small"><i class="fa fa-image"></i></span>
               <span>Pictures</span>
             </a>
           </li>
-          <li data-target="pane-3" id="3">
-            <a href="">
-              <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+          <li data-target="pane-3" id="3" role="tab">
+            <a>
+              <span aria-hidden="true" class="icon is-small"><i class="fab fa-superpowers" aria-controls="pane-2"></i></span>
               <span>Team</span>
             </a>
           </li>
-          <li data-target="pane-4" id="4">
-            <a href="">
-              <span class="icon is-small"><i class="fa fa-film"></i></span>
+          <li data-target="pane-4" id="4" role="tab">
+            <a>
+              <span aria-hidden="true" class="icon is-small"><i class="fa fa-film" aria-controls="pane-3"></i></span>
               <span>Video</span>
             </a>
           </li>
@@ -298,8 +304,8 @@
       </div>
     </section>
 
-    <div class="tab-content container">
-      <div class="tab-pane is-active" id="pane-1" class="level">
+    <div class="tab-content container" role="region">
+      <div class="tab-pane is-active" id="pane-1" class="level" role="tabpanel">
         <div class="container">
           <div class="columns features">
             <div class="column is-4">
@@ -355,7 +361,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-3">
+      <div class="tab-pane" id="pane-3" role="tabpanel">
         <div class="columns medias">
           <div class="column">
             <div class="media">
@@ -416,7 +422,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-4">
+      <div class="tab-pane" id="pane-4" role="tabpanel">
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <h4 class="title has-text-centered">Inspired video</h4>
@@ -428,10 +434,10 @@
       </div>
     </div>
 
-    <section class="section has-background-grey-lighter" id="events">
+    <section class="section has-background-grey-lighter" aria-labelledby="events">
       <div class="container has-text-centered">
           <div class="section-heading has-text-centered">
-            <h2 class="title is-2">Upcoming events</h2>
+            <h2 class="title is-2" id="events">Upcoming events</h2>
             <p class="subtitle is-5">Outcoming dates for the best options</p>
           </div>
 
@@ -503,9 +509,9 @@
       </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" aria-labelledby="services">
       <div class="section-heading has-text-centered">
-        <h2 class="title is-2">Services</h2>
+        <h2 class="title is-2" id="services">Services</h2>
         <p class="subtitle is-5">What can I do for you?</p>
       </div>
       <div class="container">
@@ -551,10 +557,10 @@
       </div>
     </section>
 
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="photos">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Photos from past events</h2>
+          <h2 class="title is-2" id="photos">Photos from past events</h2>
         </div>
 
         <div class="container portfolio-container">
@@ -717,10 +723,10 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="forum">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Forum</h2>
+          <h2 class="title is-2" id="forum">Forum</h2>
           <p class="subtitle is-5">Discuss any topic with no leaving this page</p>
         </div>
 
@@ -884,10 +890,10 @@
       </div>
     </section>
 
-    <section class="section has-background-light">
+    <section class="section has-background-light" aria-labelledby="contact">
       <div class="container">
         <div class="section-heading has-text-centered">
-          <h2 class="title is-2">Contact us</h2>
+          <h2 class="title is-2" id="contact">Contact us</h2>
           <p class="subtitle is-5">Don't hesitate, ask anything</p>
         </div>
 
@@ -895,7 +901,7 @@
           <div class="field">
             <label class="label" for="name">Name</label>
             <div class="control">
-              <input class="input" id="name" type="text" placeholder="Text input">
+              <input class="input" id="name" type="text" aria-placeholder="Text input">
             </div>
           </div>
 
@@ -903,10 +909,10 @@
             <label class="label" for="username">Username</label>
             <div class="control has-icons-left has-icons-right">
               <input id="username" class="input is-success" type="text">
-              <span class="icon is-small is-left">
+              <span aria-hidden="true" class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
-              <span class="icon is-small is-right">
+              <span aria-hidden="true" class="icon is-small is-right">
                 <i class="fas fa-check"></i>
               </span>
             </div>
@@ -916,11 +922,11 @@
           <div class="field">
             <label class="label" for="emailField">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input id="emailField" class="input is-danger" type="email" placeholder="Email input" value="hello@">
-              <span class="icon is-small is-left">
+              <input id="emailField" class="input is-danger" type="email" aria-placeholder="Email input" value="hello@">
+              <span aria-hidden="true" class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
-              <span class="icon is-small is-right">
+              <span aria-hidden="true" class="icon is-small is-right">
                 <i class="fas fa-exclamation-triangle"></i>
               </span>
             </div>
@@ -942,7 +948,7 @@
           <div class="field">
             <label class="label" for="message">Message</label>
             <div class="control">
-              <textarea class="textarea" id="message" placeholder="Textarea"></textarea>
+              <textarea class="textarea" id="message" aria-placeholder="Textarea"></textarea>
             </div>
           </div>
 
@@ -1145,9 +1151,10 @@
     </div>
   </footer>
   </main>
-  <div id="modal-card" class="modal modal-fx-3dSlit">
+  <div id="modal-card" class="modal modal-fx-3dSlit" aria-modal="true" aria-labelledby="modal-card-title" role="dialog">
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
+      <p class="visuallyhidden" id="modal-card-title">Modal card title</p>
       <div class="card">
         <div class="card-image">
           <div class="image is-4by3">
@@ -1183,17 +1190,19 @@
     <button class="modal-close is-large"><span class="visuallyhidden">Close modal window</span></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" class="modal modal-fx-3dSlit" aria-modal="true" aria-labelledby="modal-title1" role="dialog">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
+      <p class="visuallyhidden" id="modal-title1">Modal image 1</p>
       <img alt="" src="https://source.unsplash.com/random/?sig=1">
     </div>
     <button class="modal-close is-large"><span class="visuallyhidden">Close modal window</span></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div id="modal-image2" class="modal modal-fx-superScaled" aria-modal="true" aria-labelledby="modal-title2" role="dialog">
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
+      <p class="visuallyhidden" id="modal-title2">Modal image 2</p>
       <img alt="" src="https://source.unsplash.com/random/?sig=3">
     </div>
     <button class="modal-close is-large"><span class="visuallyhidden">Close modal window</span></button>

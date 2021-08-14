@@ -1,6 +1,6 @@
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
+    url('../img/accessibility-hero-banner.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -84,14 +84,13 @@
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19);
 }
 
-
 .has-same-height .card {
   height: 350px;
   overflow: hidden;
 }
 
 .skills-content .media + .media {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .skills-content .progress {
@@ -103,8 +102,8 @@
 }
 
 .info-tiles {
-  margin: .75rem auto;
-  padding: 0 .75rem;
+  margin: 0.75rem auto;
+  padding: 0 0.75rem;
 }
 
 .button.is-primary.is-alt {
@@ -118,7 +117,7 @@
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #E6EAEE;
+  border-bottom: 1px solid #e6eaee;
 }
 .post:last-child {
   padding-bottom: 0;
@@ -126,9 +125,8 @@
 }
 
 .forum-list li {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
@@ -166,7 +164,7 @@ li {
 }
 
 .ol-list li::before {
-  content: "";
+  content: '';
   background: url(../img/arrow_sans_right-512.png) no-repeat;
   display: inline-block;
   text-align: center;
@@ -180,9 +178,9 @@ li {
 /* contast */
 
 a,
-.hero.is-info .tabs.is-boxed li.is-active a, 
-.hero.is-info .tabs.is-boxed li.is-active a:hover, 
-.hero.is-info .tabs.is-toggle li.is-active a, 
+.hero.is-info .tabs.is-boxed li.is-active a,
+.hero.is-info .tabs.is-boxed li.is-active a:hover,
+.hero.is-info .tabs.is-toggle li.is-active a,
 .hero.is-info .tabs.is-toggle li.is-active a:hover {
   color: #2d6fda;
   opacity: 1;
@@ -213,7 +211,7 @@ a:focus,
   background: #2d6fda;
 }
 
-.subtitle, 
+.subtitle,
 .tag:not(body).is-primary,
 .tag:not(body).is-success,
 .button.is-white.is-outlined:hover {
@@ -232,19 +230,21 @@ a:focus,
   background-color: #fff;
 }
 
-#terms {
-  color: #2566D0;
+#terms,
+#terms a {
+  color: #003b9a;
 }
 
 .tag:not(body).is-danger {
-  background-color: #C0072C !important;
+  background-color: #c0072c !important;
 }
 
 .help.is-danger {
-  color: #C0072C !important;
+  color: #c0072c !important;
 }
 
-.input.is-success, .textarea.is-success {
+.input.is-success,
+.textarea.is-success {
   border-color: #11662f;
 }
 
