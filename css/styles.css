@@ -10,16 +10,7 @@
 }
 .tab-content {
   padding: 2rem;
-}
-.tab-pane {
-  display: none;
-}
-.tab-pane.is-active {
-  display: block;
-  position: relative;
-}
-.is-active {
-  display: initial;
+  background-color: white;
 }
 
 .cent {
@@ -177,20 +168,42 @@ li {
 
 /* contast */
 
-a,
-.hero.is-info .tabs.is-boxed li.is-active a,
-.hero.is-info .tabs.is-boxed li.is-active a:hover,
-.hero.is-info .tabs.is-toggle li.is-active a,
-.hero.is-info .tabs.is-toggle li.is-active a:hover {
+a {
   color: #2d6fda;
   opacity: 1;
+  cursor: pointer;
 }
 
-.hero.is-info .tabs a,
+.tabs.is-boxed button[aria-selected='true'],
+.tabs.is-boxed button[aria-selected='true']:hover,
+.tabs.is-toggle button[aria-selected='true'],
+.tabs.is-toggle button[aria-selected='true']:hover {
+  color: #2d6fda;
+  background-color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .hero.is-info .subtitle,
 .button.is-white.is-outlined:focus {
   color: #fff;
   opacity: 1;
+  cursor: pointer;
+}
+
+.tabs {
+  justify-content: center;
+}
+
+.tabs button {
+  background: none;
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  border-radius: 3px;
+  padding: 8px 12px;
 }
 
 a:focus,
@@ -209,6 +222,10 @@ a:focus,
 .button.is-info,
 .button.is-primary.is-alt {
   background: #2d6fda;
+}
+
+.hero.is-info .tab-pane {
+  color: #4a4a4a;
 }
 
 .subtitle,

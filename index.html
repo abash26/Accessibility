@@ -280,159 +280,157 @@
           <p class="subtitle">We are always in touch we the outside world</p>
         </div>
       </div>
-      <div class="tabs is-boxed is-centered main-menu" id="nav">
-        <ul role="tablist">
-          <li data-target="pane-1" id="1" aria-selected="true" class="is-active" role="tab" aria-controls="pane-1">
-            <a>
-              <span aria-hidden="true" class="icon is-small"><i class="fa fa-image"></i></span>
-              <span>Pictures</span>
-            </a>
-          </li>
-          <li data-target="pane-3" id="3" role="tab">
-            <a>
-              <span aria-hidden="true" class="icon is-small"><i class="fab fa-superpowers" aria-controls="pane-2"></i></span>
-              <span>Team</span>
-            </a>
-          </li>
-          <li data-target="pane-4" id="4" role="tab">
-            <a>
-              <span aria-hidden="true" class="icon is-small"><i class="fa fa-film" aria-controls="pane-3"></i></span>
-              <span>Video</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
 
-    <div class="tab-content container" role="region">
-      <div class="tab-pane is-active" id="pane-1" class="level" role="tabpanel">
+      <div class="tabs is-boxed is-centered main-menu container" id="nav">
+        <div role="tablist" aria-label="Topics">
+          <button id="tab1" aria-selected="true" role="tab" aria-controls="pane-1">
+            <span aria-hidden="true" class="icon is-small"><i class="fa fa-image"></i></span>
+            Pictures
+          </button>
+          <button id="tab2" aria-selected="false" role="tab" aria-controls="pane-2" tabindex="-1">
+            <span aria-hidden="true" class="icon is-small"><i class="fab fa-superpowers"></i></span>
+            Team
+          </button>
+          <button id="tab3" aria-selected="false" role="tab" aria-controls="pane-3" tabindex="-1">
+            <span aria-hidden="true" class="icon is-small"><i class="fa fa-film"></i></span>
+            Video
+          </button>
+        </div>
+      </div>
+
+      <div class="tab-content">
         <div class="container">
-          <div class="columns features">
-            <div class="column is-4">
-              <div class="card">
-                <div class="card-image">
-                  <div class="image is-4by3">
-                    <img alt="controller" src="./img/tab-1.jpg" class="modal-button" data-target="modal-image1">
+          <div class="tab-pane" id="pane-1" tabindex="0" class="level" aria-labelledby="tab1" role="tabpanel">
+            <div class="container">
+              <div class="columns features">
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="image is-4by3">
+                        <img alt="controller" src="./img/tab-1.jpg" class="modal-button" data-target="modal-image1">
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <div>Click on image above</div>
+                        <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
+                        <button class="button is-link modal-button" data-target="modal-image1">Image modal</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="card-content">
-                  <div class="content">
-                    <div>Click on image above</div>
-                    <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                    <button class="button is-link modal-button" data-target="modal-image1">Image modal</button>
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="image is-4by3">
+                        <img alt="sunny beach" src="./img/tab-2.jpg">
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <div>Tempor orci dapibus ultrices in.</div>
+                        <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
+                          sed risus.</p>
+                        <button class="button is-link modal-button" data-target="modal-card">Modal Card</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4 modal-button" data-target="modal-image">
+                  <div class="card">
+                    <div class="card-image">
+                      <div class="image is-4by3">
+                        <img alt="rainbow" src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2">
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content">
+                        <div>Click anywhere on card</div>
+                        <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        <button class="button is-link modal-button" data-target="modal-image2">Image modal</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="column is-4">
-              <div class="card">
-                <div class="card-image">
-                  <div class="image is-4by3">
-                    <img alt="sunny beach" src="./img/tab-2.jpg">
+          </div>
+          <div class="tab-pane" id="pane-2" tabindex="0" aria-labelledby="tab2" role="tabpanel" hidden="">
+            <div class="columns medias">
+              <div class="column">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fab fa-github-square fa-4x"></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href=""><b>Dominic Ipsum</b></a>
+                        <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div class="card-content">
-                  <div class="content">
-                    <div>Tempor orci dapibus ultrices in.</div>
-                    <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                      sed risus.</p>
-                    <button class="button is-link modal-button" data-target="modal-card">Modal Card</button>
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fab fa-empire fa-4x"></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href=""><b>Cassie Ipsum</b></a>
+                        <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fab fa-ravelry fa-4x"></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href=""><b>Avery Ipsum</b></a>
+                        <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left">
+                    <i class="fab fa-github-alt fa-4x"></i>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href=""><b>io Ipsum</b></a>
+                        <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="column is-4 modal-button" data-target="modal-image">
-              <div class="card">
-                <div class="card-image">
-                  <div class="image is-4by3">
-                    <img alt="rainbow" src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2">
-                  </div>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    <div>Click anywhere on card</div>
-                    <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    <button class="button is-link modal-button" data-target="modal-image2">Image modal</button>
-                  </div>
+          </div>
+          <div class="tab-pane" id="pane-3" tabindex="0" aria-labelledby="tab3" role="tabpanel" hidden="">
+            <div class="columns is-centered">
+              <div class="column is-three-quarters">
+                <h4 class="title has-text-centered">Inspired video</h4>
+                <div class="embed-container image">
+                  <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="tab-pane" id="pane-3" role="tabpanel">
-        <div class="columns medias">
-          <div class="column">
-            <div class="media">
-              <div class="media-left">
-                <i class="fab fa-github-square fa-4x"></i>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <a href=""><b>Dominic Ipsum</b></a>
-                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="media">
-              <div class="media-left">
-                <i class="fab fa-empire fa-4x"></i>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <a href=""><b>Cassie Ipsum</b></a>
-                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="media">
-              <div class="media-left">
-                <i class="fab fa-ravelry fa-4x"></i>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <a href=""><b>Avery Ipsum</b></a>
-                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="media">
-              <div class="media-left">
-                <i class="fab fa-github-alt fa-4x"></i>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <a href=""><b>io Ipsum</b></a>
-                    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-pane" id="pane-4" role="tabpanel">
-        <div class="columns is-centered">
-          <div class="column is-three-quarters">
-            <h4 class="title has-text-centered">Inspired video</h4>
-            <div class="embed-container image">
-              <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </div>
+
+    </section>
 
     <section class="section has-background-grey-lighter" aria-labelledby="events">
       <div class="container has-text-centered">
